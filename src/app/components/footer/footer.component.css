@@ -1,63 +1,108 @@
-/* Estilos Gerais */
+/* Estilização geral do Footer */
 .footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #000; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    padding: 20px 40px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .footer-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #fff; /* Verde */
-  }
-  
-  .footer-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-contact {
-    font-size: 14px;
-    color: #ccc; /* Cinza claro */
-  }
-  
-  .logo-branco {
-    height: 32px; /*Ajuste a altura conforme necessário */
-    width: 145.69px; /* Mantém a proporção da imagem */
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .social-icon {
-    height: 24px;
-    width: 24px;
-    cursor: pointer;
-  }
-  
-  .social-icon:hover {
-    opacity: 0.8;
+  display: flex;
+  flex-direction: row; /* Colunas lado a lado */
+  justify-content: center; /* Centraliza as colunas */
+  align-items: flex-start; /* Alinha no topo */
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  padding: 30px 15px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Permite que as colunas "quebrem linha" */
+}
+
+.footer-column,
+.footer-column-desenvolvido {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin: 10px 20px; /* Espaçamento entre colunas */
+  flex: 1; /* Permite ajustar o tamanho */
+  max-width: 300px; /* Limita largura */
+  min-width: 200px; /* Garante uma base mínima */
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+.footer-column p {
+  margin: 5px 0; /* Espaçamento vertical */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+.footer-column-desenvolvido .logo-branco {
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre ícones */
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+
+/* Telas médias (até 768px) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Coloca as colunas em coluna */
+    align-items: center; /* Centraliza as colunas no centro */
+    text-align: center; /* Alinha o conteúdo ao centro */
   }
 
-  
+  .footer-column,
+  .footer-column-desenvolvido {
+    margin: 10px 0; /* Espaçamento reduzido entre colunas */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 300px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Telas pequenas (até 480px) */
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-link,
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    width: 20px;
+  }
+}

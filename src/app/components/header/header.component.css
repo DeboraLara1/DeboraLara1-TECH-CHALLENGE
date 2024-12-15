@@ -1,62 +1,172 @@
-/* Estilos gerais */
+/* Estilo do Header */
 .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #000; /* Cor de fundo preta */
-    color: #47A138; /* Verde */
-    font-family: Arial, sans-serif;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color: #47A138;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  max-width: 150px;
+}
+
+.logo-mobile {
+  display: none;
   
-  /* Logo */
-  .logo-image {
-    height: 20px; /*Ajuste a altura conforme necessário */
-    width: auto; /* Mantém a proporção da imagem */
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #47A138;
+  margin-left: 20px;
+}
+
+.buttons {
+  display: flex;
+}
+.side-menu{
+  display: none;
+}
+.btn {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.primary-btn {
+  background-color: #47A138;
+  color: #fff;
+}
+
+.secondary-btn {
+  background-color: #000;
+  color: #47A138;
+  border: 2px solid #47A138;
+}
+
+
+
+/* Responsividade para Tablet */
+@media (max-width: 768px) {
+  #logo {
+    display: none; /* Esconde o logo padrão no tablet */
   }
-  
-  /* Navegação */
+
+  #logo-mobile {
+    display: block; /* Exibe o logo para tablet */
+    max-width: 120px; /* Ajuste o tamanho do logo para o tablet */
+  }
+
   .nav {
     display: flex;
-    gap: 20px;
   }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #47A138; /* Verde */
-    font-size: 16px;
+
+  .hamburger-menu {
+    display: none; /* Esconde o menu hambúrguer no tablet */
   }
-  
-  .nav-link:hover {
-    text-decoration: underline;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 480px) {
+  .header {
+    height: 30px;
   }
-  
-  /* Botões */
+
+  #logo {
+    display: block; /* Esconde o logo padrão no celular */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #logo-mobile {
+    display: none; /* Exibe o logo para celular */
+
+  }
+
+  .nav {
+    display: none; /* Esconde o menu de navegação */
+  }
+
   .buttons {
-    display: flex;
-    gap: 10px;
+    display: none; /* Esconde os botões */
   }
-  
-  .btn {
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
+
+  .hamburger-menu {
+    display: block; /* Exibe o menu hambúrguer */
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
   }
-  
-  .primary-btn {
-    background-color: #47A138; /* Verde sólido */
-    color: #fff;
+
+  .hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #47A138;
+    margin: 6px 0;
+    transition: 0.3s;
   }
-  
-  .secondary-btn {
-    background-color: transparent;
-    border: 1px solid #47A138; /* Verde */
+
+  /* Estilo para o menu quando o hambúrguer estiver ativo */
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 10px;
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -10px;
+  }
+
+  .side-menu {
+    display: none; /* Inicialmente o menu lateral está oculto */
+    background-color: #000;
     color: #47A138;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
   }
-  
-  .primary-btn:hover,
-  .secondary-btn:hover {
-    opacity: 0.8;
+
+  .side-menu.show {
+    display: block; /* Exibe o menu quando a classe 'show' for adicionada */
   }
+    /* Estilo para o botão de fechar */
+    .close-btn {
+      color: #47A138;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .links-nav{
+      display: flex;
+      flex-direction: column;
+    }
+}
