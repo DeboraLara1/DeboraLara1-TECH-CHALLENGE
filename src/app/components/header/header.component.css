@@ -1,0 +1,62 @@
+/* Estilos gerais */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Cor de fundo preta */
+    color: #47A138; /* Verde */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Logo */
+  .logo-image {
+    height: 20px; /*Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+  }
+  
+  /* Navegação */
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #47A138; /* Verde */
+    font-size: 16px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botões */
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .primary-btn {
+    background-color: #47A138; /* Verde sólido */
+    color: #fff;
+  }
+  
+  .secondary-btn {
+    background-color: transparent;
+    border: 1px solid #47A138; /* Verde */
+    color: #47A138;
+  }
+  
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    opacity: 0.8;
+  }

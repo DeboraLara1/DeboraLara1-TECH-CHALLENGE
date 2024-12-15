@@ -1,0 +1,63 @@
+/* Estilos Gerais */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff; /* Verde */
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-contact {
+    font-size: 14px;
+    color: #ccc; /* Cinza claro */
+  }
+  
+  .logo-branco {
+    height: 32px; /*Ajuste a altura conforme necessário */
+    width: 145.69px; /* Mantém a proporção da imagem */
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+  }
+  
+  .social-icon:hover {
+    opacity: 0.8;
+  }
+
+  
