@@ -1,23 +1,23 @@
 /* Estilização geral do Footer */
 .footer {
   display: flex;
-  flex-direction: row; /* Colunas lado a lado */
-  justify-content: center; /* Centraliza as colunas */
-  align-items: flex-start; /* Alinha no topo */
-  background-color: #000; /* Fundo preto */
-  color: #fff; /* Texto branco */
-  padding: 30px 15px;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: flex-start; 
+  background-color: #000; 
+  color: #fff; 
+  padding: 6px;
   font-family: Arial, sans-serif;
-  flex-wrap: wrap; /* Permite que as colunas "quebrem linha" */
+  flex-wrap: wrap;
 }
 
 .footer-column,
 .footer-column-desenvolvido {
-  text-align: left; /* Alinha o texto à esquerda */
-  margin: 10px 20px; /* Espaçamento entre colunas */
-  flex: 1; /* Permite ajustar o tamanho */
-  max-width: 300px; /* Limita largura */
-  min-width: 200px; /* Garante uma base mínima */
+  text-align: left; 
+  margin: 10px 20px;
+  flex: 1; 
+  max-width: 300px; 
+  min-width: 200px; 
 }
 
 .footer-title {
@@ -45,8 +45,8 @@
   margin: 5px 0;
 }
 .footer-column p {
-  margin: 5px 0; /* Espaçamento vertical */
-  line-height: 1.5; /* Espaçamento entre linhas */
+  margin: 5px 0; 
+  line-height: 1.5; 
 }
 
 .footer-column-desenvolvido .logo-branco {
@@ -58,7 +58,7 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espaçamento entre ícones */
+  gap: 10px; 
   margin-top: 10px;
 }
 
@@ -73,16 +73,16 @@
 /* Telas médias (até 768px) */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Coloca as colunas em coluna */
-    align-items: center; /* Centraliza as colunas no centro */
-    text-align: center; /* Alinha o conteúdo ao centro */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
   }
 
   .footer-column,
   .footer-column-desenvolvido {
-    margin: 10px 0; /* Espaçamento reduzido entre colunas */
-    text-align: left; /* Alinha o texto à esquerda */
-    width: 100%; /* Ocupa toda a largura disponível */
+    margin: 10px 0; 
+    text-align: left; 
+    width: 100%; 
     max-width: 300px;
   }
 

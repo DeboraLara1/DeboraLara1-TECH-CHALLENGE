@@ -5,4 +5,5 @@ main {
     background: url(../assets/imagens/background-home.png);
     background-size: cover;
     min-height: 77vh;
+    font-family: 'inter';
   }
