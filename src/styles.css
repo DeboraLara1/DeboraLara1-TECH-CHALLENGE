@@ -3,3 +3,10 @@
     margin: 0;
     padding: 0;
   }
+  :root {
+    --primary-color: #e71818;
+    --secondary-color: #006c84;
+    --font-size-base: 16px;
+    --tablet_width: 720px;
+    --mobile_width: 360px;
+  }
