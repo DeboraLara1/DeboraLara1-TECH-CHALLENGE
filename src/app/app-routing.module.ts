@@ -7,21 +7,29 @@ import { OtherServicesComponent } from './pages/other-services/other-services.co
 import { MyCardsComponent } from './pages/other-services/my-cards/my-cards.component';
 import { InvestmentsComponent } from './pages/investments/investments.component';
 import { MyAccountComponent } from './pages/my-account/my-account.component';
+import { CommonLayoutComponent } from './common-layout/common-layout.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'investments', component: InvestmentsComponent },
-  { path: 'otherServices', component: OtherServicesComponent },
-  { path: 'myAccount', component: MyAccountComponent },
-  { path: 'otherServices/myCadrs', component: MyCardsComponent },
-  { path: '**', component: ErrorPageComponent }
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: '',
+    component: CommonLayoutComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'investments', component: InvestmentsComponent },
+      { path: 'otherServices', component: OtherServicesComponent },
+      { path: 'myAccount', component: MyAccountComponent },
+      { path: 'otherServices/myCadrs', component: MyCardsComponent },
+      { path: '**', component: ErrorPageComponent },
+    ],
+  },
 ];
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

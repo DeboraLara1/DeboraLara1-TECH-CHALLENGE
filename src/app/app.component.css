@@ -3,7 +3,8 @@
 
 main {
   background-size: cover;
-  min-height: 77vh;
+  min-height: 100vh;
   font-family: 'inter';
   background: #E4EDE3;
 }
+

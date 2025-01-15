@@ -27,6 +27,7 @@ import { CardLargeComponent } from './components/card-large/card-large.component
 import { DonutChartComponent } from './components/donut-chart/donut-chart.component';
 import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { CardMyAccountComponent } from './components/card-my-account/card-my-account.component';
+import { CommonLayoutComponent } from './common-layout/common-layout.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CardMyAccountComponent } from './components/card-my-account/card-my-acc
     CardLargeComponent,
     DonutChartComponent,
     MyAccountComponent,
-    CardMyAccountComponent
+    CardMyAccountComponent,
+    CommonLayoutComponent,
   ],
   imports: [
     BrowserModule,
